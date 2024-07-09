@@ -5,8 +5,8 @@ This respository contains code files intended to illustrate my understanding of 
 - Software Development 3 [SWDV H2001](https://www.tudublin.ie/study/modules/swdv-h2001-software-development-3/)
 - Software Development 4 [SWDV H2002](https://www.tudublin.ie/study/modules/swdv-h2002-software-development-4/)
 
+## Strategy Implementation ([strat_4.py](strat_4.py))
+This file contains the source code for the implementation of a trading strategy I created. It works by connecting to interactive brokers servers via a websocket following the TCP protocol. I chose the TCP protocol over the HTTP protocol due to the streaming nature of the price data. 
+
 ## Strategy Backtest ([backtest_4.py](backtest_4.py))
 This file contains the source code for one of my early backtests. It works by returning key metrics of a sample strategy using historical data from interactive brokers API. 
-
-## Strategy Implementation ([strat_4.py](strat_4.py))
-This file contains the source code for the implementation of a trading strategy I created. It works by connecting to interactive brokers servers via a websocket following the TCP protocol. I chose the TCP protocol over the HTTP protocol due to the streaming nature of the price data.  
