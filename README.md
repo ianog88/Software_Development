@@ -4,4 +4,4 @@ This respository contains code files intended to illustrate my understanding of 
 - Software Development 1 (SWDV H1002)
 - Software Development 1 (SWDV H2001)
 - Software Development 1 (SWDV H2002)
-- [GitHub Pages]([https://pages.github.com/](https://www.tudublin.ie/study/modules/swdv-h1001-software-development-1/)
+- [SWDV H2001](https://www.tudublin.ie/study/modules/swdv-h1001-software-development-1/)
