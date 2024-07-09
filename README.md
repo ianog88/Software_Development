@@ -5,5 +5,5 @@ This respository contains code files intended to illustrate my understanding of 
 - Software Development 3 [SWDV H2001](https://www.tudublin.ie/study/modules/swdv-h2001-software-development-3/)
 - Software Development 4 [SWDV H2002](https://www.tudublin.ie/study/modules/swdv-h2002-software-development-4/)
 
-## Strategy Backtest [(backtest_4.py)](backtest_4.py)
+## Strategy Backtest ([backtest_4.py](backtest_4.py))
 This file contains the source code for one of my early backtests. It works by returning key metrics of a sample strategy using historical data from interactive brokers API. 
