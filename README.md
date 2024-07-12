@@ -6,7 +6,10 @@ This respository contains code files intended to illustrate my understanding of 
 - [Software Development 4 (SWDV H2002)](https://www.tudublin.ie/study/modules/swdv-h2002-software-development-4/)
 
 ## Strategy Implementation ([strat_4.py](strat_4.py))
-This file contains the source code for the implementation of a trading strategy I created. It works by connecting to interactive brokers servers via a websocket following the TCP protocol. I chose the TCP protocol over the HTTP protocol due to the streaming nature of the price data. 
+This file contains the source code for the implementation of a trading strategy I created. The basic structure it follows involves first connecting to Interactive Broker’s servers via tcp connection (chosen over http due to the streaming nature of the requests). It receives current price data using the IBapi.EWrapper interface and passes the data through the main function which decides what actions to take (buy/sell, quantity) based on the result of various predefined functions. Orders are then sent to the brokers servers using the EClientSocket class to be executed. 
+
+### Latency Issues 
+This type of software poses a challenge from a latency perspective as it is essentially trading 500 stocks simultaneously. A tick to trade latency greater than 3/4 seconds can significantly diminish the results and is the main reason I no longer run this system. I make use of threading, daemon threads in particular, in an attempt to speed the program up. However, the design of pythons memory management, the global interpreter lock in particular which limits the execution to one thread at a time, meant the latency was still significantly too high. This problem was my motivation for learning C++ which is the current industry standard for trading systems. 
 
 ## Strategy Backtest ([backtest_4.py](backtest_4.py))
 This file contains the source code for one of my early backtests. It works by returning key metrics of a sample strategy using historical data from interactive brokers API. 
