@@ -1,5 +1,5 @@
 # Software Development
-This respository contains code files intended to illustrate my understanding of object orientated programming and software development. I have included two code files I have written myself during the time I was actively trading. Both files make use of core programming concepts such as variables, conditional and looping statements, functions and classes as well as more advanced concepts such as inheritance, wrapper classes and threading. This corresponds to the learning outcomes of the modules
+This respository contains code files intended to illustrate my understanding of object orientated programming and software development. I have included two code files I have written myself during a time in which I was actively trading. Both files make use of core programming concepts such as variables, conditional and looping statements, functions and classes as well as more advanced concepts such as inheritance, wrapper classes and threading. This corresponds to the learning outcomes of the modules
 - [Software Development 1 (SWDV H1001)](https://www.tudublin.ie/study/modules/swdv-h1001-software-development-1/)
 - [Software Development 2 (SWDV H1002)](https://www.tudublin.ie/study/modules/swdv-h1002-software-development-2/)
 - [Software Development 3 (SWDV H2001)](https://www.tudublin.ie/study/modules/swdv-h2001-software-development-3/)
