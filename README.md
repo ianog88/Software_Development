@@ -4,6 +4,10 @@ This respository contains code files intended to illustrate my understanding of 
 - [Software Development 2 (SWDV H1002)](https://www.tudublin.ie/study/modules/swdv-h1002-software-development-2/)
 - [Software Development 3 (SWDV H2001)](https://www.tudublin.ie/study/modules/swdv-h2001-software-development-3/)
 - [Software Development 4 (SWDV H2002)](https://www.tudublin.ie/study/modules/swdv-h2002-software-development-4/)
+- [Systems Analysis (SYAN H1004)](https://www.tudublin.ie/study/modules/syan-h1004-systems-analysis/)
+- [Systems Analysis & Design (SYAD H2000)](https://www.tudublin.ie/study/modules/syad-h2000-systems-analysis--design/)
+- [Applied Software Systems Analysis and Design (OOSD H3002)](https://www.tudublin.ie/study/modules/oosd-h3002-applied-software-systems-analysis-and-design/)
+- [Software Quality Assurance and Testing (SOEN H2001)](https://www.tudublin.ie/study/modules/soen-h2001-software-quality-assurance-and-testing/)
 
 ## Strategy Implementation ([strat_4.py](strat_4.py))
 This file contains the source code for the implementation of a trading strategy I created. The basic structure it follows involves first connecting to Interactive Broker’s servers via tcp connection (chosen over http due to the streaming nature of the requests). It receives current price data using the IBapi.EWrapper interface and passes the data through the main function which decides what actions to take (buy/sell, quantity) based on the result of various predefined functions. Orders are then sent to the brokers servers using the EClientSocket class to be executed. 
@@ -13,3 +17,6 @@ This type of software poses a challenge from a latency perspective as it is esse
 
 ## Strategy Backtest ([backtest_4.py](backtest_4.py))
 The purpose of this code is to backtest a trading strategy and return various key performance indicators such as return, sharpe ratio and max drawdown. This involves receiving historical price data, in this scenario I used Interactive Brokers data via the TCP connection however a HTTP protocol would also work fine. I regularly use the yahoo finance api which uses a HTTP protocol in which I store the data in a SQL database. This strategy is not profitable and was never traded live, I’m just using it as an example of code I have written.
+
+### Systems Analysis and Design 
+
