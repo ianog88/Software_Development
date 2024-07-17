@@ -1,5 +1,5 @@
 # Software Development
-This respository contains code files intended to illustrate my understanding of object orientated programming and software development. I have included two code files I have written during a time in which I was actively trading. Both files make use of core programming concepts such as variables, conditional and looping statements, functions and classes as well as more advanced concepts such as inheritance, wrapper classes and threading. This corresponds to the learning outcomes of the modules
+This respository contains code files intended to illustrate my understanding of object orientated programming and software development. I have included two code files I wrote when I was actively trading. Both files make use of core programming concepts such as variables, conditional and looping statements, functions and classes as well as more advanced concepts such as inheritance, wrapper classes and threading. This corresponds to the learning outcomes of the modules
 - [Software Development 1 (SWDV H1001)](https://www.tudublin.ie/study/modules/swdv-h1001-software-development-1/)
 - [Software Development 2 (SWDV H1002)](https://www.tudublin.ie/study/modules/swdv-h1002-software-development-2/)
 - [Software Development 3 (SWDV H2001)](https://www.tudublin.ie/study/modules/swdv-h2001-software-development-3/)
@@ -18,5 +18,6 @@ This type of software poses a challenge from a latency perspective as it is esse
 ## Strategy Backtest ([backtest_4.py](backtest_4.py))
 The purpose of this code is to backtest a trading strategy and return various key performance indicators such as return, sharpe ratio and max drawdown. This involves receiving historical price data, in this scenario I used Interactive Brokers data via the TCP connection however a HTTP protocol would also work fine. I regularly use the yahoo finance api which uses a HTTP protocol in which I store the data in a SQL database. This strategy is not profitable and was never traded live, I’m just using it as an example of code I have written.
 
-### Systems Analysis and Design 
+## Systems Analysis and Design 
+I follow the agile development approach as outlined in the book “Clean Code” which outlines various conventions for writing readable and robust code. These include meaningful names, functions with minimal abstraction and small classes. For version control, I create virtual environments using the anaconda distribution. I conduct unit tests on each function defined in my program and would also run each strategy on a demo account prior to live trading.
 
