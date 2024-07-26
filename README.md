@@ -9,11 +9,14 @@ This respository contains code files intended to illustrate my understanding of 
 - [Applied Software Systems Analysis and Design (OOSD H3002)](https://www.tudublin.ie/study/modules/oosd-h3002-applied-software-systems-analysis-and-design/)
 - [Software Quality Assurance and Testing (SOEN H2001)](https://www.tudublin.ie/study/modules/soen-h2001-software-quality-assurance-and-testing/)
 
-## Strategy Implementation ([strat_4.py](strat_4.py))
+## Python Implementation ([strat_4.py](strat_4.py))
 This file contains the source code for the implementation of a trading strategy I created. The basic structure it follows involves first connecting to Interactive Broker’s servers via TCP connection (chosen over HTTP due to the streaming nature of the requests). It receives current price data using the IBapi.EWrapper interface and passes the data through the main function which decides what actions to take (buy/sell, quantity) based on the result of various predefined functions. Orders are then sent to the brokers servers using the EClientSocket class to be executed. 
 
 ### Latency Issues 
 This type of software poses a challenge from a latency perspective as it is essentially trading 500 stocks simultaneously. A tick to trade latency greater than 3/4 seconds can significantly diminish the results and is the main reason I no longer run this system. I make use of threading, daemon threads in particular, in an attempt to speed the program up. However, the design of pythons memory management, the global interpreter lock in particular which limits the execution to one thread at a time, meant the latency was still significantly too high. This problem was my motivation for learning C++ which is the current industry standard for trading systems. 
+
+## C++ Implementation ([StatArb_4.cpp](StatArb_4.cpp))
+This is the source code for a strategy I implemented in C++. I followed the same networking protocol as the previous strategy while implementing multithreading to create two threads to request market and historical data simultaneously. This was particularly important for performance given the large number of stocks. I use a mutex to synchronise access to the stockChanges vector, which is a shared resource, to ensure requests do not conflict with each other. Although this source code was implementing a simpler strategy with less technical indicators, the performance was significantly better than the python implementation.
 
 ## Strategy Backtest ([backtest_4.py](backtest_4.py))
 The purpose of this code is to backtest a trading strategy and return various key performance indicators such as return, sharpe ratio and max drawdown. This involves receiving historical price data, in this scenario I used Interactive Brokers data via the TCP connection however a HTTP protocol would also work fine. I regularly use the yahoo finance api which uses a HTTP protocol in which I store the data in a SQL database. This strategy is not profitable and was never traded live, I’m just using it as an example of code I have written.
